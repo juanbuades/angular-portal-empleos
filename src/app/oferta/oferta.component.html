@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>oferta</title>
+  </head>
+  <body>
+    <ul class="list-group" *ngFor="let oferta of this.selectedOferta">
+      <li class="list-group-item list-group-item-light">
+        {{ oferta.titulo }}
+      </li>
+      <li class="list-group-item list-group-item-light">
+        {{ oferta.descripcion }}
+      </li>
+      <li class="list-group-item list-group-item-light">
+        {{ oferta.empresa }}
+      </li>
+      <li class="list-group-item list-group-item-light">
+        {{ oferta.salario }}
+      </li>
+      <li class="list-group-item list-group-item-light">
+        {{ oferta.ciudad }}
+      </li>
+      <li class="list-group-item list-group-item-light">
+        {{ oferta.email }}
+      </li>
+    </ul>
+  </body>
+</html>

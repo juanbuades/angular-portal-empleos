@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-blue">
+        <div class="container-fluid" >
+          <div  class="collapse navbar-collapse" id="mynavbar">
+              <button  class="btn btn-primary" type="button" 
+              routerLink="/login">LOGIN</button>
+          </div>
+        </div>
+      </nav>
+    
+      <div class="container mt-2">
+        <h2>Ofertas de empleo</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Título de la oferta</th>
+              <th>+Info</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-primary" *ngFor="let oferta of this.arrayOfertaTrabajo">
+              <td style="width: max-content;">{{ oferta.titulo }}</td>
+              <td> <a [routerLink]="['/oferta', oferta.id]">Ver</a> </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+</body>
+</html>
